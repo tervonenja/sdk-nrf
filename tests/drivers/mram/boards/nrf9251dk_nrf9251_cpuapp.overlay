@@ -1,0 +1,26 @@
+/*
+ * Copyright (c) 2026 Nordic Semiconductor ASA
+ *
+ * SPDX-License-Identifier: LicenseRef-Nordic-5-Clause
+ */
+
+/* Launch both VPR cores (non-XIP: code copied from MRAM into their TCM). */
+&cpuppr_vpr {
+	status = "okay";
+};
+
+&cpuflpr_vpr {
+	status = "okay";
+};
+
+&storage_partition {
+	status = "okay";
+};
+
+&uart132 {
+    status = "reserved";
+};
+
+&uart120 {
+    status = "reserved";
+};

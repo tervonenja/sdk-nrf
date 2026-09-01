@@ -1,0 +1,22 @@
+common:
+  sysbuild: true
+  tags:
+    - drivers
+    - mram
+  platform_allow:
+    - nrf9251dk/nrf9251/cpuapp
+  integration_platforms:
+    - nrf9251dk/nrf9251/cpuapp
+  timeout: 60
+  harness: console
+  harness_config:
+    type: multi_line
+    ordered: false
+    regex:
+      - "cpuapp: reads=\\d+ result=0"
+      - "cpuppr: writes=\\d+ result=0"
+      - "cpuflpr: writes=\\d+ result=0"
+      - "Tests status: PASS"
+
+tests:
+  drivers.mram.concurrent_access: {}

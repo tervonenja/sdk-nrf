@@ -1,0 +1,20 @@
+/*
+ * Copyright (c) 2026 Nordic Semiconductor ASA
+ *
+ * SPDX-License-Identifier: LicenseRef-Nordic-5-Clause
+ */
+
+&storage_partition {
+	status = "okay";
+};
+
+/* Route this core's console to uart132 for debug prints. */
+/ {
+	chosen {
+		zephyr,console = &uart132;
+	};
+};
+
+&uart132 {
+	status = "okay";
+};
