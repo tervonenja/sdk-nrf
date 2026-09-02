@@ -65,7 +65,7 @@ manifest:
     # https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/zephyr/guides/modules.html
     - name: zephyr
       url: https://github.com/tervonenja/sdk-zephyr.git
-      revision: main
+      revision: add-mram-mutex
       path: zephyr
       import:
         # In addition to the zephyr repository itself, NCS also
